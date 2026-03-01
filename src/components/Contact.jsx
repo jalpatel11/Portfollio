@@ -61,18 +61,18 @@ export default function Contact() {
               <a href="https://github.com/jalpatel11" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
                 <span className="contact__social-num">01</span>
                 <span className="contact__social-name">GitHub</span>
-                <span className="contact__social-arrow">↗</span>
+                <span className="contact__social-arrow">→</span>
               </a>
-              <a href="https://linkedin.com/in/jalpatel11" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/jal1102/" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
                 <span className="contact__social-num">02</span>
                 <span className="contact__social-name">LinkedIn</span>
-                <span className="contact__social-arrow">↗</span>
+                <span className="contact__social-arrow">→</span>
               </a>
 
               <a href="https://drive.google.com/file/d/17820325457890123456789012345678/view?usp=sharing" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
                 <span className="contact__social-num">03</span>
                 <span className="contact__social-name">Resume</span>
-                <span className="contact__social-arrow">↗</span>
+                <span className="contact__social-arrow">→</span>
               </a>
             </div>
           </div>

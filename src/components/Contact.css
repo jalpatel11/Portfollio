@@ -124,9 +124,11 @@
 }
 
 .contact__social-arrow {
-  font-size: 1rem;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
   color: var(--text-muted);
   transition: color 0.2s ease;
+  font-variant-emoji: text;
 }
 
 .contact__social-link:hover .contact__social-arrow {

@@ -57,13 +57,17 @@ const projects = [
 export default function Projects() {
   const sectionRef = useRef(null);
   const [activeIdx, setActiveIdx] = useState(null);
+  const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+            setRevealed(true);
+            // Reveal non-project-item elements (heading, label)
+            e.target.querySelectorAll('.section-label, .projects__heading, .projects__footer')
+              .forEach((el) => el.classList.add('visible'));
           }
         });
       },
@@ -90,7 +94,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <div
               key={p.num}
-              className={`project-item reveal reveal--delay-${Math.min(i + 1, 4)} ${activeIdx === i ? 'project-item--active' : ''}`}
+              className={`project-item reveal reveal--delay-${Math.min(i + 1, 4)} ${revealed ? 'visible' : ''} ${activeIdx === i ? 'project-item--active' : ''}`}
               onMouseEnter={() => setActiveIdx(i)}
               onMouseLeave={() => setActiveIdx(null)}
               data-hover

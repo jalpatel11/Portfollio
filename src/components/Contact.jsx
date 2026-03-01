@@ -21,7 +21,7 @@ export default function Contact() {
   }, []);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('jal@example.com');
+    navigator.clipboard.writeText('contact@jalpatel.dev');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -50,7 +50,7 @@ export default function Contact() {
 
             <div className="contact__links reveal reveal--delay-3">
               <button className="contact__email-btn" onClick={handleCopy} data-hover>
-                <span className="contact__email-text">jal@example.com</span>
+                <span className="contact__email-text">contact@jalpatel.dev</span>
                 <span className="contact__email-action">{copied ? 'Copied!' : 'Copy'}</span>
               </button>
             </div>
@@ -63,20 +63,16 @@ export default function Contact() {
                 <span className="contact__social-name">GitHub</span>
                 <span className="contact__social-arrow">↗</span>
               </a>
-              <a href="#" className="contact__social-link" data-hover>
+              <a href="https://linkedin.com/in/jalpatel11" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
                 <span className="contact__social-num">02</span>
                 <span className="contact__social-name">LinkedIn</span>
                 <span className="contact__social-arrow">↗</span>
               </a>
-              <a href="#" className="contact__social-link" data-hover>
+
+              <a href="https://drive.google.com/file/d/17820325457890123456789012345678/view?usp=sharing" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
                 <span className="contact__social-num">03</span>
-                <span className="contact__social-name">Twitter / X</span>
-                <span className="contact__social-arrow">↗</span>
-              </a>
-              <a href="#" className="contact__social-link" data-hover>
-                <span className="contact__social-num">04</span>
                 <span className="contact__social-name">Resume</span>
-                <span className="contact__social-arrow">↓</span>
+                <span className="contact__social-arrow">↗</span>
               </a>
             </div>
           </div>

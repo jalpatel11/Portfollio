@@ -194,3 +194,17 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 480px) {
+  .contact__email-btn {
+    width: 100%;
+  }
+
+  .contact__body {
+    max-width: 100%;
+  }
+
+  .contact__social-name {
+    font-size: 1.1rem;
+  }
+}

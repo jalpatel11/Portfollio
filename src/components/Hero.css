@@ -247,7 +247,7 @@
   }
 
   .hero__bg-text {
-    font-size: 6rem;
+    font-size: clamp(4rem, 20vw, 7rem);
     right: -1rem;
     top: 10%;
     transform: none;

@@ -46,7 +46,7 @@ export default function Hero() {
 
       <div className="hero__content">
         <div className="hero__meta">
-          <span className="hero__meta-label">EST. 2000</span>
+          <span className="hero__meta-label">Based in USA</span>
           <span className="hero__meta-dot" />
           <span className="hero__meta-label">{time}</span>
         </div>

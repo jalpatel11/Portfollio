@@ -15,14 +15,15 @@
   --charcoal-mid: #2E2E2E;
   --orange: #D94F1E;
   --orange-light: #E8622E;
-  --text-primary: #1C1C1C;
-  --text-secondary: #5A5248;
-  --text-muted: #9A8F83;
+  --text-primary: #1A1A1A;
+  --text-secondary: #3D3530;
+  --text-muted: #7A6F65;
   --rule: #C8BBAB;
 
   /* Typography */
   --font-display: 'Bebas Neue', sans-serif;
-  --font-body: 'IBM Plex Mono', monospace;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
   --font-serif: 'Playfair Display', serif;
 
   /* Spacing */
@@ -43,8 +44,8 @@ body {
   background-color: var(--cream);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.65;
   overflow-x: hidden;
   cursor: none;
 }

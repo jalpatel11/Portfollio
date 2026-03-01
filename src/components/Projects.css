@@ -199,12 +199,17 @@
 
   .project-item__cta {
     align-self: flex-start;
+    margin-left: 1rem;
   }
 
   .project-item__left {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    padding-left: 1rem;
+  }
+
+  .project-item__right {
     padding-left: 1rem;
   }
 }

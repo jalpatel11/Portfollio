@@ -156,16 +156,22 @@
   .skills__header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1.5rem;
   }
 
   .skills__subtext {
     text-align: left;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .skills__header {
-    gap: 1.5rem;
     margin-bottom: 2.5rem;
+  }
+
+  .skills__logo-tag {
+    padding: 0.35rem 0.75rem;
+    font-size: 10px;
   }
 }

@@ -28,7 +28,7 @@
 
   /* Spacing */
   --nav-width: 72px;
-  --section-pad: clamp(5rem, 10vw, 9rem);
+  --section-pad: clamp(3.5rem, 10vw, 9rem);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

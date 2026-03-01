@@ -24,13 +24,13 @@ const projects = [
   },
   {
     num: '003',
-    title: 'SafeBite',
-    category: 'Blockchain / Web3',
+    title: 'Phoenix LandCover',
+    category: 'ML / Computer Vision',
     year: '2025',
-    desc: 'Decentralized food supply chain traceability platform on Ethereum. Producers, distributors, and consumers track products farm-to-table via immutable ledger. Uses blockchain event logs instead of on-chain storage arrays — cutting gas costs by ~95% while maintaining full provenance history.',
-    tags: ['Solidity', 'React', 'Hardhat', 'MetaMask', 'Express'],
+    desc: 'Deep learning pipeline for pixel-wise land use classification over Central Phoenix using Sentinel-2 satellite imagery. Custom U-Net in TensorFlow/Keras across 9 land cover classes — achieving 95.95% pixel accuracy, 95.50% weighted F1, and 92.79% mean IoU. Patch-based training with full-image reconstruction.',
+    tags: ['Python', 'TensorFlow', 'U-Net', 'Google Earth Engine', 'Sentinel-2'],
     accent: '#D94F1E',
-    link: 'https://github.com/jalpatel11/SafeBite-Blockchain-Food-Traceability',
+    link: 'https://github.com/jalpatel11/phoenix-landcover-segmentation',
   },
   {
     num: '004',
@@ -41,16 +41,6 @@ const projects = [
     tags: ['TypeScript', 'React', 'Leaflet', 'Netlify Functions', 'Open-Meteo'],
     accent: '#1C1C1C',
     link: 'https://github.com/jalpatel11/windborne-constellation-tracker',
-  },
-  {
-    num: '005',
-    title: 'Phoenix LandCover',
-    category: 'ML / Computer Vision',
-    year: '2025',
-    desc: 'Deep learning pipeline for pixel-wise land use classification over Central Phoenix using Sentinel-2 satellite imagery. Custom U-Net in TensorFlow/Keras across 9 land cover classes — achieving 95.95% pixel accuracy, 95.50% weighted F1, and 92.79% mean IoU. Patch-based training with full-image reconstruction.',
-    tags: ['Python', 'TensorFlow', 'U-Net', 'Google Earth Engine', 'Sentinel-2'],
-    accent: '#D94F1E',
-    link: 'https://github.com/jalpatel11/phoenix-landcover-segmentation',
   },
 ];
 

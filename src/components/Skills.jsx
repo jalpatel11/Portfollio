@@ -3,30 +3,30 @@ import './Skills.css';
 
 const categories = [
   {
-    label: 'Frontend',
+    label: 'ML / AI',
     items: [
-      { name: 'React / Next.js', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'CSS / Animation', level: 88 },
-      { name: 'WebGL / Canvas', level: 65 },
+      { name: 'Python', level: 95 },
+      { name: 'PyTorch / TensorFlow', level: 85 },
+      { name: 'scikit-learn / HuggingFace', level: 82 },
+      { name: 'LangChain / LangGraph', level: 78 },
     ],
   },
   {
-    label: 'Backend',
+    label: 'Full-Stack',
     items: [
-      { name: 'Node.js / Express', level: 90 },
-      { name: 'Go', level: 75 },
-      { name: 'PostgreSQL', level: 85 },
-      { name: 'Redis', level: 80 },
+      { name: 'React / Next.js', level: 90 },
+      { name: 'FastAPI / Node.js', level: 85 },
+      { name: 'TypeScript', level: 88 },
+      { name: 'PostgreSQL / MongoDB', level: 82 },
     ],
   },
   {
     label: 'Infrastructure',
     items: [
-      { name: 'Docker / K8s', level: 78 },
-      { name: 'AWS / GCP', level: 72 },
-      { name: 'CI/CD Pipelines', level: 82 },
-      { name: 'Observability', level: 70 },
+      { name: 'Docker', level: 82 },
+      { name: 'AWS', level: 72 },
+      { name: 'GitHub Actions / CI/CD', level: 80 },
+      { name: 'Data Pipelines / ETL', level: 78 },
     ],
   },
 ];
@@ -110,7 +110,7 @@ export default function Skills() {
 
         {/* Tech logos row */}
         <div className="skills__logos reveal reveal--delay-3">
-          {['React', 'Node', 'TypeScript', 'Go', 'Postgres', 'Redis', 'Docker', 'AWS'].map((tech) => (
+          {['Python', 'PyTorch', 'TensorFlow', 'React', 'FastAPI', 'TypeScript', 'PostgreSQL', 'Docker', 'AWS'].map((tech) => (
             <span key={tech} className="skills__logo-tag">{tech}</span>
           ))}
         </div>

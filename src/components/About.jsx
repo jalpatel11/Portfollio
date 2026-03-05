@@ -36,26 +36,28 @@ export default function About() {
             </h2>
 
             <p className="about__body reveal reveal--delay-2">
-              I'm Jal — a software engineer who grew up on the belief that
-              code should be both fast and honest. I care about what happens
-              under the hood: memory layouts, cache misses, the 12ms that
-              separates a good user experience from a great one.
+              I'm Jal — an MS Data Science student at ASU and software
+              engineer who believes the best models are useless without
+              the systems to serve them. I work at the intersection of ML
+              and full-stack engineering: training pipelines by day,
+              React dashboards by night.
             </p>
 
             <p className="about__body reveal reveal--delay-3">
-              I've worked across the stack — from React UIs that need to feel
-              alive, to APIs handling millions of requests, to data pipelines
-              that can't afford to fail. I think in systems, I design in
-              constraints, and I ship things that hold up.
+              I've shipped transformer-based classifiers, U-Net segmentation
+              models, LangGraph multi-agent systems, and full-stack apps —
+              from FastAPI backends processing 1M+ records to Next.js
+              frontends that need to feel alive. I think in systems and
+              I ship things that hold up.
             </p>
 
             <div className="about__stats reveal reveal--delay-4">
               <div className="about__stat">
-                <span className="about__stat-num">4+</span>
+                <span className="about__stat-num">3+</span>
                 <span className="about__stat-label">Years building</span>
               </div>
               <div className="about__stat">
-                <span className="about__stat-num">20+</span>
+                <span className="about__stat-num">15+</span>
                 <span className="about__stat-label">Projects shipped</span>
               </div>
               <div className="about__stat">
@@ -74,10 +76,10 @@ export default function About() {
               </div>
               <pre className="about__code">
 {`const jal = {
-  based: "United States",
-  stack: ["React", "Node", "Go"],
+  based: "Tempe, AZ",
+  stack: ["Python", "React", "FastAPI"],
   obsessions: [
-    "render perf",
+    "ML pipelines",
     "clean APIs",
     "good typography",
   ],
@@ -89,7 +91,7 @@ export default function About() {
             </div>
 
             <div className="about__interests">
-              {['Systems Design', 'Performance', 'Compilers', 'Type Theory', 'UI Craft', 'Open Source'].map((item) => (
+              {['Machine Learning', 'Data Engineering', 'Systems Design', 'UI Craft', 'Open Source', 'Performance'].map((item) => (
                 <span key={item} className="about__interest-tag">{item}</span>
               ))}
             </div>

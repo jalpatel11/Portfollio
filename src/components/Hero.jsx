@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import './Hero.css';
 
 const ROLES = [
-  'Software Engineer',
+  'ML Engineer',
+  'Full-Stack Developer',
+  'Data Scientist',
   'Systems Thinker',
-  'Performance Nerd',
-  'UI Craftsman',
 ];
 
 export default function Hero() {
@@ -92,7 +92,7 @@ export default function Hero() {
         <div className="hero__ticker-track" ref={tickerRef}>
           {[...Array(3)].map((_, i) => (
             <span key={i} className="hero__ticker-item">
-              React &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Redis &nbsp;·&nbsp; Docker &nbsp;·&nbsp; AWS &nbsp;·&nbsp; Rust &nbsp;·&nbsp; Systems Design &nbsp;·&nbsp; Performance &nbsp;·&nbsp;
+              Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; TensorFlow &nbsp;·&nbsp; React &nbsp;·&nbsp; FastAPI &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Docker &nbsp;·&nbsp; AWS &nbsp;·&nbsp; LangGraph &nbsp;·&nbsp; HuggingFace &nbsp;·&nbsp; scikit-learn &nbsp;·&nbsp;
             </span>
           ))}
         </div>

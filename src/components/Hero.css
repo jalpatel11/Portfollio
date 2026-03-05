@@ -239,14 +239,8 @@
    RESPONSIVE
    =========================== */
 
-/* Small laptop — line overlaps content, push it right */
+/* Hide decorative line on anything smaller than full desktop */
 @media (max-width: 1300px) {
-  .hero__rule {
-    right: 10%;
-  }
-}
-
-@media (max-width: 1050px) {
   .hero__rule {
     display: none;
   }

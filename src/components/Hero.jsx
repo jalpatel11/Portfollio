@@ -81,12 +81,6 @@ export default function Hero() {
       {/* Diagonal accent line */}
       <div className="hero__rule" aria-hidden="true" />
 
-      {/* Scroll cue */}
-      <div className="hero__scroll-cue" aria-hidden="true">
-        <span>Scroll</span>
-        <div className="hero__scroll-line" />
-      </div>
-
       {/* Marquee ticker */}
       <div className="hero__ticker" aria-hidden="true">
         <div className="hero__ticker-track" ref={tickerRef}>

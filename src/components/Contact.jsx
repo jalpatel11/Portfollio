@@ -30,7 +30,7 @@ export default function Contact() {
     <section id="contact" className="contact" ref={sectionRef}>
       <div className="contact__inner">
         <div className="section-label reveal">
-          <span>04</span>
+          <span>05</span>
           <span>Contact</span>
         </div>
 

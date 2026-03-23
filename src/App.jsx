@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import LeetCode from './components/LeetCode';
 import Contact from './components/Contact';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <LeetCode />
         <Contact />
       </main>
     </>

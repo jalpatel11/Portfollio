@@ -69,8 +69,14 @@ export default function Contact() {
                 <span className="contact__social-arrow">→</span>
               </a>
 
-              <a href="https://drive.google.com/file/d/17820325457890123456789012345678/view?usp=sharing" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
+              <a href="https://leetcode.com/u/jal_patel/" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
                 <span className="contact__social-num">03</span>
+                <span className="contact__social-name">LeetCode</span>
+                <span className="contact__social-arrow">→</span>
+              </a>
+
+              <a href="https://drive.google.com/file/d/1_foQ5iABwrmnbJCXUoYDYCZNkVJK6iqE/view?usp=sharing" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
+                <span className="contact__social-num">04</span>
                 <span className="contact__social-name">Resume</span>
                 <span className="contact__social-arrow">→</span>
               </a>

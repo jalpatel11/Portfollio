@@ -127,6 +127,13 @@
   border: 1px solid var(--rule);
 }
 
+.project-item__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-self: center;
+}
+
 .project-item__cta {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -134,7 +141,6 @@
   text-transform: uppercase;
   font-weight: 500;
   color: var(--charcoal);
-  align-self: center;
   padding: 0.6rem 1.2rem;
   border: 1px solid var(--charcoal);
   white-space: nowrap;
@@ -197,9 +203,13 @@
     gap: 1rem;
   }
 
-  .project-item__cta {
+  .project-item__links {
     align-self: flex-start;
     margin-left: 1rem;
+  }
+
+  .project-item__cta {
+    align-self: flex-start;
   }
 
   .project-item__left {
@@ -228,6 +238,10 @@
 
   .project-item__desc {
     max-width: 100%;
+  }
+
+  .project-item__links {
+    margin-left: 0.75rem;
   }
 
   .projects__footer {

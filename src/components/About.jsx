@@ -36,19 +36,15 @@ export default function About() {
             </h2>
 
             <p className="about__body reveal reveal--delay-2">
-              I'm Jal — an MS Data Science student at ASU and software
-              engineer who believes the best models are useless without
-              the systems to serve them. I work at the intersection of ML
-              and full-stack engineering: training pipelines by day,
-              React dashboards by night.
+              I’m Jal, a recent M.S. Data Science graduate from Arizona State University and currently working as a Data Scientist. I build software around data and AI systems: backend services, pipelines, dashboards, mobile features, and evaluation workflows.
             </p>
 
             <p className="about__body reveal reveal--delay-3">
-              I've shipped transformer-based classifiers, U-Net segmentation
-              models, LangGraph multi-agent systems, and full-stack apps —
-              from FastAPI backends processing 1M+ records to Next.js
-              frontends that need to feel alive. I think in systems and
-              I ship things that hold up.
+              I’ve worked on Python microservices, React and React Native apps, Kafka/Spark data pipelines, Databricks recommendation systems, and LangGraph agents for CI/CD automation. At Sentari AI, I helped build an AI journaling app that used transcription and emotion analysis, with offline processing and monitoring built into the product.
+            </p>
+
+            <p className="about__body reveal reveal--delay-4">
+              I like systems that are useful in the real world. Clean APIs, clear dashboards, reliable pipelines, and AI outputs that are checked before people trust them.
             </p>
 
             <div className="about__stats reveal reveal--delay-4">

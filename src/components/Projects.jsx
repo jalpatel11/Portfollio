@@ -126,7 +126,7 @@ export default function Projects() {
     <section id="projects" className="projects" ref={sectionRef}>
       <div className="projects__inner">
         <div className="section-label reveal">
-          <span>03</span>
+          <span>04</span>
           <span>Work</span>
         </div>
 

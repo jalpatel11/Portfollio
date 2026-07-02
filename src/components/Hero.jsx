@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import './Hero.css';
 
 const ROLES = [
-  'ML Engineer',
+  'AI Engineer',
   'Full-Stack Developer',
   'Data Scientist',
   'Systems Thinker',

@@ -3,30 +3,58 @@ import './Skills.css';
 
 const categories = [
   {
-    label: 'ML / AI',
+    label: 'Programming',
     items: [
       { name: 'Python', level: 95 },
-      { name: 'PyTorch / TensorFlow', level: 85 },
-      { name: 'scikit-learn / HuggingFace', level: 82 },
-      { name: 'LangChain / LangGraph', level: 78 },
+      { name: 'SQL', level: 92 },
+      { name: 'JavaScript / TypeScript', level: 90 },
+      { name: 'Java', level: 84 },
+      { name: 'Go', level: 74 },
+      { name: 'PHP / C++', level: 78 },
     ],
   },
   {
-    label: 'Full-Stack',
+    label: 'Data & Analytics',
     items: [
-      { name: 'React / Next.js', level: 90 },
-      { name: 'FastAPI / Node.js', level: 85 },
-      { name: 'TypeScript', level: 88 },
-      { name: 'PostgreSQL / MongoDB', level: 82 },
+      { name: 'Pandas', level: 94 },
+      { name: 'Excel', level: 88 },
+      { name: 'Statistical Modeling', level: 87 },
+      { name: 'Predictive Modeling', level: 85 },
+      { name: 'Data Visualization', level: 86 },
+      { name: 'Data Mining', level: 80 },
     ],
   },
   {
-    label: 'Infrastructure',
+    label: 'Backend',
     items: [
-      { name: 'Docker', level: 82 },
-      { name: 'AWS', level: 72 },
-      { name: 'GitHub Actions / CI/CD', level: 80 },
-      { name: 'Data Pipelines / ETL', level: 78 },
+      { name: 'FastAPI', level: 92 },
+      { name: 'Flask', level: 88 },
+      { name: 'Django', level: 84 },
+      { name: 'Node.js', level: 82 },
+      { name: 'PostgreSQL / MongoDB', level: 84 },
+      { name: 'OAuth2 / Next.js', level: 80 },
+    ],
+  },
+  {
+    label: 'Systems',
+    items: [
+      { name: 'AWS', level: 86 },
+      { name: 'Databricks', level: 80 },
+      { name: 'Docker', level: 84 },
+      { name: 'Kubernetes', level: 78 },
+      { name: 'Kafka', level: 80 },
+      { name: 'Spark Streaming', level: 79 },
+    ],
+  },
+  {
+    label: 'AI / ML',
+    items: [
+      { name: 'LangGraph', level: 86 },
+      { name: 'PyTorch', level: 88 },
+      { name: 'XGBoost', level: 82 },
+      { name: 'RAG', level: 80 },
+      { name: 'OpenAI', level: 84 },
+      { name: 'MLflow / LangSmith / Ollama / MCP', level: 76 },
     ],
   },
 ];
@@ -71,11 +99,11 @@ export default function Skills() {
 
         <div className="skills__header reveal reveal--delay-1">
           <h2 className="skills__heading">
-            Tools I<br />
-            <span>reach for.</span>
+            Technical<br />
+            <span>skills.</span>
           </h2>
           <p className="skills__subtext">
-            Not a skill collector — I go deep on what I use and I'm honest about what I'm still learning.
+            A resume-style snapshot of the tools and systems I use across data, backend, and AI work.
           </p>
         </div>
 
@@ -110,7 +138,7 @@ export default function Skills() {
 
         {/* Tech logos row */}
         <div className="skills__logos reveal reveal--delay-3">
-          {['Python', 'PyTorch', 'TensorFlow', 'React', 'FastAPI', 'TypeScript', 'PostgreSQL', 'Docker', 'AWS'].map((tech) => (
+          {['Python', 'SQL', 'Pandas', 'FastAPI', 'Django', 'Docker', 'Kubernetes', 'Kafka', 'LangGraph', 'AWS'].map((tech) => (
             <span key={tech} className="skills__logo-tag">{tech}</span>
           ))}
         </div>

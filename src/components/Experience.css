@@ -80,15 +80,15 @@
 .experience__company {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
 }
 
 .experience__location,
 .experience__dates {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
+  font-size: 12px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
@@ -111,8 +111,8 @@
   grid-template-columns: 12px 1fr;
   gap: 0.75rem;
   align-items: start;
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.85;
   color: var(--text-secondary);
 }
 
@@ -159,10 +159,11 @@
   }
 
   .experience__company {
-    font-size: 1rem;
+    font-size: 1.04rem;
   }
 
   .experience__bullet {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.8;
   }
 }

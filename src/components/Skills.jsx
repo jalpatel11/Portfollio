@@ -102,9 +102,6 @@ export default function Skills() {
             Technical<br />
             <span>skills.</span>
           </h2>
-          <p className="skills__subtext">
-            A resume-style snapshot of the tools and systems I use across data, backend, and AI work.
-          </p>
         </div>
 
         <div className="skills__grid">

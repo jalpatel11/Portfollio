@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { FaLayerGroup } from 'react-icons/fa';
 import './Skills.css';
 
 const categories = [
@@ -69,7 +70,6 @@ export default function Skills() {
         entries.forEach((e) => {
           if (e.isIntersecting) {
             e.target.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
-            // Animate bars
             barsRef.current.forEach((bar) => {
               if (bar) {
                 const level = bar.dataset.level;
@@ -90,23 +90,19 @@ export default function Skills() {
   let barIndex = 0;
 
   return (
-    <section id="skills" className="skills" ref={sectionRef}>
-      <div className="skills__inner">
-        <div className="section-label reveal">
-          <span>02</span>
-          <span>Skills</span>
-        </div>
-
-        <div className="skills__header reveal reveal--delay-1">
-          <h2 className="skills__heading">
-            Technical<br />
-            <span>skills.</span>
-          </h2>
-        </div>
+    <section id="skills" className="section skills" ref={sectionRef}>
+      <div className="container">
+        <span className="section-label reveal">
+          <FaLayerGroup aria-hidden="true" /> Skills
+        </span>
+        <h2 className="section-title reveal">My tech stack &amp; expertise</h2>
+        <p className="section-desc reveal">
+          Tools and technologies I use to build robust, scalable, and intelligent systems.
+        </p>
 
         <div className="skills__grid">
           {categories.map((cat, ci) => (
-            <div key={cat.label} className={`skills__category reveal reveal--delay-${ci + 1}`}>
+            <div key={cat.label} className={`card skills__category reveal reveal--delay-${ci + 1}`}>
               <div className="skills__cat-label">{cat.label}</div>
               <div className="skills__items">
                 {cat.items.map((item) => {
@@ -133,10 +129,9 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Tech logos row */}
         <div className="skills__logos reveal reveal--delay-3">
           {['Python', 'SQL', 'Pandas', 'FastAPI', 'Django', 'Docker', 'Kubernetes', 'Kafka', 'LangGraph', 'AWS'].map((tech) => (
-            <span key={tech} className="skills__logo-tag">{tech}</span>
+            <span key={tech} className="tag-pill">{tech}</span>
           ))}
         </div>
       </div>

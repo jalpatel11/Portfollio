@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { FaPaperPlane, FaGithub, FaCodeBranch, FaBriefcase } from 'react-icons/fa';
 import './Hero.css';
 
 const ROLES = [
@@ -8,88 +9,124 @@ const ROLES = [
   'Systems Thinker',
 ];
 
+const STATS = [
+  { val: '3+', label: 'Years building' },
+  { val: '15+', label: 'Projects shipped' },
+  { val: '4', label: 'Companies worked' },
+];
+
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);
-  const [glitching, setGlitching] = useState(false);
-  const [time, setTime] = useState('');
-  const tickerRef = useRef(null);
+  const [fading, setFading] = useState(false);
+  const [photoError, setPhotoError] = useState(false);
 
-  // Cycle roles with glitch
   useEffect(() => {
     const interval = setInterval(() => {
-      setGlitching(true);
+      setFading(true);
       setTimeout(() => {
         setRoleIdx((i) => (i + 1) % ROLES.length);
-        setGlitching(false);
-      }, 400);
+        setFading(false);
+      }, 300);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  // Live clock
-  useEffect(() => {
-    const tick = () => {
-      const d = new Date();
-      setTime(d.toLocaleTimeString('en-US', { hour12: false }));
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
+  const role = ROLES[roleIdx];
+  const [firstWord, ...rest] = role.split(' ');
 
   return (
     <section id="hero" className="hero">
-      {/* Big background text */}
-      <div className="hero__bg-text" aria-hidden="true">
-        JAL<br />PATEL
+      <div className="hero__bg" aria-hidden="true">
+        <div className="hero__orb hero__orb--1" />
+        <div className="hero__orb hero__orb--2" />
+        <div className="hero__orb hero__orb--3" />
       </div>
+      <div className="hero__grid" aria-hidden="true" />
 
-      <div className="hero__content">
-        <div className="hero__meta">
-          <span className="hero__meta-label">Based in USA</span>
-          <span className="hero__meta-dot" />
-          <span className="hero__meta-label">{time}</span>
-        </div>
+      <div className="container hero__container">
+        <div className="hero__content">
+          <div className="hero__badge hero__anim hero__anim--d0">
+            <span className="hero__badge-dot" />
+            Available for full-time opportunities · May 2026
+          </div>
 
-        <h1 className="hero__name">
-          <span className="hero__name-first">Jal</span>
-          <span className="hero__name-last">Patel</span>
-        </h1>
+          <h1 className="hero__name hero__anim hero__anim--d1">
+            Hi, I am <span className="hero__name-highlight">Jal</span>
+          </h1>
 
-        <div className="hero__role-wrap">
-          <span className="hero__role-bar" aria-hidden="true" />
-          <p className={`hero__role ${glitching ? 'hero__role--glitch' : ''}`}>
-            {ROLES[roleIdx]}
-          </p>
-        </div>
-
-        <p className="hero__tagline">
-          I build things that are fast, honest,<br />
-          and alive at the edges.
-        </p>
-
-        <div className="hero__ctas">
-          <a href="#projects" className="hero__cta hero__cta--primary" data-hover>
-            See my work
-          </a>
-          <a href="#contact" className="hero__cta hero__cta--ghost" data-hover>
-            Say hello →
-          </a>
-        </div>
-      </div>
-
-      {/* Diagonal accent line */}
-      <div className="hero__rule" aria-hidden="true" />
-
-      {/* Marquee ticker */}
-      <div className="hero__ticker" aria-hidden="true">
-        <div className="hero__ticker-track" ref={tickerRef}>
-          {[...Array(3)].map((_, i) => (
-            <span key={i} className="hero__ticker-item">
-              Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; TensorFlow &nbsp;·&nbsp; React &nbsp;·&nbsp; FastAPI &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Docker &nbsp;·&nbsp; AWS &nbsp;·&nbsp; LangGraph &nbsp;·&nbsp; HuggingFace &nbsp;·&nbsp; scikit-learn &nbsp;·&nbsp;
+          <div className="hero__role-wrap hero__anim hero__anim--d2">
+            <span className={`hero__role ${fading ? 'hero__role--fade' : ''}`}>
+              <span className="hero__role-highlight">{firstWord}</span> {rest.join(' ')}
             </span>
-          ))}
+          </div>
+
+          <p className="hero__desc hero__anim hero__anim--d3">
+            I build software around data and AI systems — backend services, pipelines,
+            dashboards, and evaluation workflows. M.S. Data Science @ ASU. Open-source
+            contributor to GRASS GIS.
+          </p>
+
+          <div className="hero__ctas hero__anim hero__anim--d4">
+            <a href="#contact" className="btn btn-primary" data-hover>
+              <FaPaperPlane /> Let's Connect
+            </a>
+            <a
+              href="https://github.com/jalpatel11"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+              data-hover
+            >
+              <FaGithub /> View GitHub
+            </a>
+          </div>
+
+          <div className="hero__stats hero__anim hero__anim--d4">
+            {STATS.map((s) => (
+              <div key={s.label} className="hero__stat">
+                <div className="hero__stat-val">{s.val}</div>
+                <div className="hero__stat-label">{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <div className="hero__visual">
+          <div className="hero__photo-frame">
+            <div className="hero__photo-ring" aria-hidden="true" />
+            <div className="hero__photo-ring-bg" aria-hidden="true" />
+            <div className="hero__photo-img">
+              {!photoError ? (
+                <img src="/jal.jpeg" alt="Jal Patel" onError={() => setPhotoError(true)} />
+              ) : (
+                <div className="hero__photo-placeholder">JP</div>
+              )}
+            </div>
+          </div>
+
+          <div className="hero__float-card hero__float-card--1">
+            <span className="hero__float-icon"><FaCodeBranch aria-hidden="true" /></span>
+            <div>
+              <div className="hero__float-title">Open Source</div>
+              <div className="hero__float-sub">GRASS GIS Contributor</div>
+            </div>
+          </div>
+
+          <div className="hero__float-card hero__float-card--2">
+            <span className="hero__float-icon"><FaBriefcase aria-hidden="true" /></span>
+            <div>
+              <div className="hero__float-title">Experience</div>
+              <div className="hero__float-sub">4 companies worked</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" className="scroll-hint" aria-label="Scroll to About section">
+          <span className="scroll-wheel" aria-hidden="true">
+            <span className="scroll-dot" />
+          </span>
+          Scroll
+        </a>
       </div>
     </section>
   );

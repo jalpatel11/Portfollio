@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { FaQuoteLeft, FaLinkedin } from 'react-icons/fa';
 import './Recommendation.css';
 
-const LINKEDIN_RECS_URL = 'https://www.linkedin.com/in/jal1102/details/recommendations/?detailScreenTabIndex=0';
+const LINKEDIN_RECS_URL = 'https://www.linkedin.com/in/jal-patel-swe/details/recommendations/?detailScreenTabIndex=0';
 
 const recommendations = [
   {

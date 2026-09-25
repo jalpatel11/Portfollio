@@ -5,3 +5,28 @@
   border-top: 1px solid var(--border);
   background: linear-gradient(160deg, color-mix(in srgb, var(--accent-warm) 8%, var(--bg)) 0%, var(--bg) 60%);
 }
+
+/* Tighter interleaved zigzag: safe here because entries are few and
+   consistently tall enough to clear same-side overlap. Sections with
+   shorter or growing card lists (Open Source, Education) keep the
+   default non-overlapping timeline spacing instead. */
+.experience .tl-item {
+  margin-top: -10rem;
+}
+
+.experience .tl-item:first-child {
+  margin-top: 0;
+}
+
+/* Matches the shared mobile timeline reset's specificity (index.css'
+   .tl-item rule inside the same breakpoint) so the stacked mobile layout
+   isn't left under the desktop-only negative overlap margin above. */
+@media (max-width: 900px) {
+  .experience .tl-item {
+    margin-top: 1.75rem;
+  }
+
+  .experience .tl-item:first-child {
+    margin-top: 0;
+  }
+}

@@ -5,10 +5,19 @@ import './OpenSource.css';
 const contributions = [
   {
     monogram: 'GG',
+    title: 'lib/datetime',
+    subtitle: 'Add pytest unit tests for datetime_scan and datetime_format',
+    org: 'GRASS GIS · OSGeo/grass',
+    date: 'Sep 2026',
+    desc: 'Added a 107-test ctypes unit test suite for the lib/datetime C library, the engine behind G_format_timestamp and G_scan_timestamp used by r.timestamp, v.timestamp, r3.timestamp, and the t.* modules.',
+    tags: ['GRASS GIS', 'Open Source', 'Python', 'pytest', 'ctypes'],
+    link: 'https://github.com/OSGeo/grass/pull/7871',
+  },
+  {
+    monogram: 'GG',
     title: 'g.gisenv',
     subtitle: 'Add pytest test suite',
     org: 'GRASS GIS · OSGeo/grass',
-    status: 'In Review',
     date: 'Aug 2026',
     desc: 'Contributed to open-source GRASS GIS development, adding test coverage for the g.gisenv module used by researchers worldwide.',
     tags: ['GRASS GIS', 'Open Source', 'Python', 'pytest'],
@@ -19,7 +28,6 @@ const contributions = [
     title: 'r.timestamp',
     subtitle: 'Add pytest test suite',
     org: 'GRASS GIS · OSGeo/grass',
-    status: 'Merged',
     date: 'Aug 2026',
     desc: 'Contributed to open-source GRASS GIS development, improving test coverage and software quality for the r.timestamp module used by researchers worldwide.',
     tags: ['GRASS GIS', 'Open Source', 'Python', 'pytest', 'Geospatial'],
@@ -76,9 +84,6 @@ export default function OpenSource() {
                     </div>
                     <div className="tc-role">{item.org}</div>
                   </div>
-                  <span className={`opensource__badge ${item.status === 'Merged' ? 'opensource__badge--merged' : 'opensource__badge--review'}`}>
-                    {item.status}
-                  </span>
                 </div>
                 <p className="tc-desc">{item.desc}</p>
                 <div className="tc-tags">

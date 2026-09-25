@@ -12,7 +12,7 @@ const ROLES = [
 const STATS = [
   { val: '3+', label: 'Years building' },
   { val: '15+', label: 'Projects shipped' },
-  { val: '4', label: 'Companies worked' },
+  { val: '5', label: 'Companies worked' },
 ];
 
 export default function Hero() {
@@ -116,7 +116,7 @@ export default function Hero() {
             <span className="hero__float-icon"><FaBriefcase aria-hidden="true" /></span>
             <div>
               <div className="hero__float-title">Experience</div>
-              <div className="hero__float-sub">4 companies worked</div>
+              <div className="hero__float-sub">5 companies worked</div>
             </div>
           </div>
         </div>

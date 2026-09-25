@@ -6,36 +6,8 @@
   background: linear-gradient(160deg, color-mix(in srgb, var(--accent-2) 10%, var(--bg)) 0%, var(--bg) 60%);
 }
 
-.opensource .tc-head {
-  position: relative;
-  padding-right: 5.5rem;
-}
-
 .opensource__subtitle {
   font-weight: 400;
   color: var(--text-2);
   font-size: 0.9em;
-}
-
-.opensource__badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-}
-
-.opensource__badge--merged {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
-}
-
-.opensource__badge--review {
-  background: transparent;
-  border: 1px solid var(--border-h);
-  color: var(--text-2);
 }

@@ -14,11 +14,24 @@ function monogram(name) {
 
 const experiences = [
   {
+    title: 'Junior Software Engineer',
+    company: 'Green Tanner Industrial',
+    logo: '/green-tanner-logo.jpeg',
+    location: 'Chandler, Arizona, United States',
+    dates: 'September 2026 – Present',
+    bullets: [
+      'Build and maintain full-stack features for an internal construction-management platform, connecting field and office workflows through API integrations with tools including Procore.',
+      'Develop a Retrieval-Augmented Generation (RAG) pipeline for internal software, applying retrieval and semantic search techniques to a production AI system.',
+      'Work across Rust, WebAssembly, HTMX, Alpine.js, Tailwind CSS, and PostgreSQL in a pair-programming and mentorship model with senior engineering staff.',
+    ],
+    tags: ['Rust', 'RAG', 'PostgreSQL', 'HTMX'],
+  },
+  {
     title: 'Data Scientist',
     company: 'Integrated Travel',
     logo: '/integrated-travel-logo.jpeg',
     location: 'Tempe, Arizona, United States · Remote',
-    dates: 'June 2026 — Present',
+    dates: 'June 2026 – Present',
     bullets: [
       'Researching a community-driven tourism and entertainment discovery platform for Central Alberta, with a focus on local events, attractions, transportation access, and grassroots economic development.',
       'Supporting early-stage research on data sources, geospatial analysis, and AI-assisted workflows to improve tourism visibility for smaller communities.',
@@ -30,7 +43,7 @@ const experiences = [
     company: 'Sentari AI',
     logo: '/sentari-logo.jpeg',
     location: 'New York, United States',
-    dates: 'August 2025 — January 2026',
+    dates: 'August 2025 – January 2026',
     bullets: [
       'Architected Python backend microservices and REST APIs powering an AI journaling app’s transcription and emotion-analysis pipeline, reducing inference latency by 21% across 30+ concurrent data streams during 200% month-over-month growth.',
       'Shipped a React and Flask dashboard for monitoring Whisper transcription and journaling insight workflows, improving production visibility and cutting incident response time by 35% with input from engineers and QA.',
@@ -43,7 +56,7 @@ const experiences = [
     title: 'Software Engineer Intern',
     company: 'Plexusnet Services',
     location: 'Ahmedabad, India',
-    dates: 'January 2024 — May 2024',
+    dates: 'January 2024 – May 2024',
     bullets: [
       'Constructed scalable Python, Django, and PostgreSQL backend services for a documentation platform where field engineers uploaded site images and reports, optimizing SQL indexing and query performance to accelerate response times by 18% across core features.',
       'Streamlined CI/CD pipelines with Docker, Kubernetes, and GitHub Actions, cutting deployment errors by 30% across 5+ services.',
@@ -57,7 +70,7 @@ const experiences = [
     company: 'Vardhan Insys',
     logo: '/vardhan-insys-logo.jpeg',
     location: 'Ahmedabad, India',
-    dates: 'June 2023 — July 2023',
+    dates: 'June 2023 – July 2023',
     bullets: [
       'Automated email response workflows using PHP scripting, reducing manual response time by 30% and improving customer query turnaround.',
       'Redesigned and deployed the company website on AWS with SEO optimization strategies using PHP, increasing organic search traffic by 20% and improving site load performance.',

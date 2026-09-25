@@ -5,7 +5,7 @@ import './Contact.css';
 
 const links = [
   { icon: FaGithub, label: 'GitHub', href: 'https://github.com/jalpatel11' },
-  { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/jal1102/' },
+  { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/jal-patel-swe/' },
   { icon: SiLeetcode, label: 'LeetCode', href: 'https://leetcode.com/u/jal_patel/' },
   { icon: FaFileAlt, label: 'Resume', href: 'https://drive.google.com/file/d/1SqFRcR2uMSuvDH0b_0zgAInENHv889Vw/view?usp=sharing' },
 ];

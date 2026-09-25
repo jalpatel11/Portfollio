@@ -73,7 +73,7 @@ export default function About() {
             </div>
 
             <a
-              href="https://www.linkedin.com/in/jal1102/"
+              href="https://www.linkedin.com/in/jal-patel-swe/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary about__linkedin"

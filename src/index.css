@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5 {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 1.5rem;
-  margin-top: -10rem;
+  margin-top: 2.5rem;
 }
 
 .tl-item:first-child {

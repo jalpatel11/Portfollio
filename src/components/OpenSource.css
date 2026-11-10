@@ -1,0 +1,13 @@
+/* ===========================
+   OPEN SOURCE
+   =========================== */
+.opensource {
+  border-top: 1px solid var(--border);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent-2) 10%, var(--bg)) 0%, var(--bg) 60%);
+}
+
+.opensource__subtitle {
+  font-weight: 400;
+  color: var(--text-2);
+  font-size: 0.9em;
+}

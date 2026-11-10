@@ -1,5 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
+import { FaEnvelope, FaGithub, FaLinkedin, FaFileAlt, FaRegCopy, FaCheck } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 import './Contact.css';
+
+const links = [
+  { icon: FaGithub, label: 'GitHub', href: 'https://github.com/jalpatel11' },
+  { icon: FaLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/jal-patel-swe/' },
+  { icon: SiLeetcode, label: 'LeetCode', href: 'https://leetcode.com/u/jal_patel/' },
+  { icon: FaFileAlt, label: 'Resume', href: 'https://drive.google.com/file/d/1NtYJgDevpQeIJHgZjXkK5RllFh80enPH/view?usp=sharing' },
+];
 
 export default function Contact() {
   const sectionRef = useRef(null);
@@ -27,73 +36,46 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact" ref={sectionRef}>
-      <div className="contact__inner">
-        <div className="section-label reveal">
-          <span>05</span>
-          <span>Contact</span>
-        </div>
+    <section id="contact" className="section contact" ref={sectionRef}>
+      <div className="container">
+        <span className="section-label reveal">
+          <FaEnvelope aria-hidden="true" /> Contact
+        </span>
+        <h2 className="section-title reveal">Let's build something worth shipping</h2>
+        <p className="section-desc reveal">
+          I'm open to full-time roles, freelance projects, and interesting conversations
+          about systems, performance, or anything in between.
+        </p>
 
-        <div className="contact__grid">
-          <div className="contact__left">
-            <h2 className="contact__heading reveal reveal--delay-1">
-              Let's build<br />
-              something<br />
-              <em>worth shipping.</em>
-            </h2>
+        <button className="btn btn-primary contact__email-btn reveal reveal--delay-1" onClick={handleCopy} data-hover>
+          {copied ? <FaCheck /> : <FaRegCopy />}
+          {copied ? 'Copied!' : 'contact@jalpatel.dev'}
+        </button>
 
-            <p className="contact__body reveal reveal--delay-2">
-              I'm open to full-time roles, freelance projects, and
-              interesting conversations about systems, performance,
-              or anything in between.
-            </p>
-
-            <div className="contact__links reveal reveal--delay-3">
-              <button className="contact__email-btn" onClick={handleCopy} data-hover>
-                <span className="contact__email-text">contact@jalpatel.dev</span>
-                <span className="contact__email-action">{copied ? 'Copied!' : 'Copy'}</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="contact__right reveal reveal--delay-2">
-            <div className="contact__social-stack">
-              <a href="https://github.com/jalpatel11" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
-                <span className="contact__social-num">01</span>
-                <span className="contact__social-name">GitHub</span>
-                <span className="contact__social-arrow">→</span>
-              </a>
-              <a href="https://www.linkedin.com/in/jal1102/" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
-                <span className="contact__social-num">02</span>
-                <span className="contact__social-name">LinkedIn</span>
-                <span className="contact__social-arrow">→</span>
-              </a>
-
-              <a href="https://leetcode.com/u/jal_patel/" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
-                <span className="contact__social-num">03</span>
-                <span className="contact__social-name">LeetCode</span>
-                <span className="contact__social-arrow">→</span>
-              </a>
-
-              <a href="https://drive.google.com/file/d/1SqFRcR2uMSuvDH0b_0zgAInENHv889Vw/view?usp=sharing" className="contact__social-link" data-hover target="_blank" rel="noreferrer">
-                <span className="contact__social-num">04</span>
-                <span className="contact__social-name">Resume</span>
-                <span className="contact__social-arrow">→</span>
-              </a>
-            </div>
-          </div>
+        <div className="contact__links">
+          {links.map((l, i) => (
+            <a
+              key={l.label}
+              href={l.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`card contact__link reveal reveal--delay-${Math.min(i + 2, 4)}`}
+              data-hover
+            >
+              <l.icon className="contact__link-icon" aria-hidden="true" />
+              <span className="contact__link-label">{l.label}</span>
+              <span className="contact__link-arrow">→</span>
+            </a>
+          ))}
         </div>
       </div>
 
-      {/* Footer strip */}
       <div className="contact__footer">
         <span className="contact__footer-name">Jal Patel</span>
-        <span className="contact__footer-copy">Designed & built with intent — {new Date().getFullYear()}</span>
-        <span className="contact__footer-scroll">
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} data-hover>
-            Back to top ↑
-          </button>
-        </span>
+        <span className="contact__footer-copy">Designed &amp; built with intent — {new Date().getFullYear()}</span>
+        <button className="contact__footer-scroll" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} data-hover>
+          Back to top ↑
+        </button>
       </div>
     </section>
   );

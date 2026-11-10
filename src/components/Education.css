@@ -1,0 +1,7 @@
+/* ===========================
+   EDUCATION
+   =========================== */
+.education {
+  border-top: 1px solid var(--border);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 9%, var(--bg)) 0%, var(--bg) 60%);
+}

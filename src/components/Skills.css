@@ -2,176 +2,87 @@
    SKILLS
    =========================== */
 .skills {
-  padding: var(--section-pad) calc(var(--nav-width) + 4rem);
-  background: var(--charcoal);
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-.skills__inner {
-  max-width: 1100px;
-}
-
-.skills .section-label {
-  color: rgba(242, 235, 217, 0.4);
-}
-
-.skills .section-label span:first-child {
-  color: var(--orange);
-}
-
-.skills .section-label::after {
-  background: rgba(255,255,255,0.1);
-}
-
-.skills__header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 3rem;
-  margin-bottom: 4rem;
-}
-
-.skills__heading {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.01em;
-  color: var(--cream);
-}
-
-.skills__heading span {
-  color: var(--orange);
-}
-
-.skills__subtext {
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.75;
-  color: rgba(242, 235, 217, 0.7);
-  max-width: 280px;
-  text-align: right;
+  border-top: 1px solid var(--border);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent-2) 10%, var(--bg)) 0%, var(--bg) 60%);
 }
 
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem 4rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 2.75rem;
+}
+
+.skills__category {
+  padding: 1.75rem;
 }
 
 .skills__cat-label {
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
+  font-size: 11px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--border);
 }
 
 .skills__items {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.1rem;
 }
 
 .skills__item-top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .skills__item-name {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  color: var(--cream);
+  color: var(--text);
 }
 
 .skills__item-pct {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: rgba(242, 235, 217, 0.45);
+  color: var(--text-3);
 }
 
 .skills__bar-track {
-  height: 2px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 1px;
+  height: 6px;
+  background: var(--bg-muted);
+  border-radius: 999px;
   overflow: hidden;
 }
 
 .skills__bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--orange), var(--orange-light));
-  border-radius: 1px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
   transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Logo tags row */
 .skills__logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.skills__logo-tag {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.45rem 1rem;
-  border: 1px solid rgba(255,255,255,0.12);
-  color: rgba(242, 235, 217, 0.65);
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.skills__logo-tag:hover {
-  border-color: var(--orange);
-  color: var(--orange);
+  gap: 0.6rem;
 }
 
 /* ===========================
    RESPONSIVE
    =========================== */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .skills__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem 3rem;
   }
 }
 
-@media (max-width: 900px) {
-  .skills {
-    padding: var(--section-pad) 1.5rem;
-  }
-
+@media (max-width: 640px) {
   .skills__grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .skills__header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-
-  .skills__subtext {
-    text-align: left;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills__header {
-    margin-bottom: 2.5rem;
-  }
-
-  .skills__logo-tag {
-    padding: 0.35rem 0.75rem;
-    font-size: 10px;
   }
 }

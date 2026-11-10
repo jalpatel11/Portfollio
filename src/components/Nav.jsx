@@ -1,20 +1,26 @@
 import { useState, useEffect } from 'react';
+import { FaGithub, FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
+import { useTheme } from '../context/useTheme';
 import './Nav.css';
 
 const links = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Work', href: '#projects' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Open Source', href: '#open-source' },
+  { label: 'Education', href: '#education' },
+  { label: 'Recommendation', href: '#recommendation' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -26,55 +32,60 @@ export default function Nav() {
 
   return (
     <>
-      {/* Side rail */}
-      <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
-        <a href="#hero" className="nav__logo" onClick={() => handleNavClick('#hero')}>
-          <span className="nav__logo-text">JP</span>
+      <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} id="navbar">
+        <a
+          href="#hero"
+          className="nav-logo"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick('#hero');
+          }}
+        >
+          <span className="nav-logo-mark">JP</span>
+          Jal Patel
         </a>
 
-        <div className="nav__side-links">
+        <ul className="nav-links">
           {links.map((l) => (
-            <button
-              key={l.label}
-              className="nav__side-link"
-              onClick={() => handleNavClick(l.href)}
-            >
-              <span>{l.label}</span>
-            </button>
+            <li key={l.label}>
+              <button onClick={() => handleNavClick(l.href)}>{l.label}</button>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <button
-          className={`nav__burger ${open ? 'nav__burger--open' : ''}`}
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="nav-actions">
+          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle dark mode">
+            {theme === 'dark' ? <FaSun /> : <FaMoon />}
+          </button>
+          <a
+            href="https://github.com/jalpatel11"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-cta"
+          >
+            <FaGithub /> GitHub
+          </a>
+          <button
+            className="hamburger"
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            {open ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </nav>
 
-      {/* Full-screen overlay menu (mobile) */}
-      <div className={`nav__overlay ${open ? 'nav__overlay--open' : ''}`}>
-        <div className="nav__overlay-inner">
-          {links.map((l, i) => (
-            <button
-              key={l.label}
-              className="nav__overlay-link"
-              style={{ '--i': i }}
-              onClick={() => handleNavClick(l.href)}
-            >
-              <span className="nav__overlay-num">0{i + 1}</span>
-              {l.label}
-            </button>
-          ))}
-        </div>
-        <div className="nav__overlay-footer">
-          <span>Based in — USA</span>
-          <span>Available for work</span>
-        </div>
-      </div>
+      <nav className={`mobile-nav ${open ? 'mobile-nav--open' : ''}`} aria-label="Mobile navigation">
+        {links.map((l) => (
+          <button key={l.label} onClick={() => handleNavClick(l.href)}>
+            {l.label}
+          </button>
+        ))}
+        <a href="https://github.com/jalpatel11" target="_blank" rel="noopener noreferrer" className="mobile-nav__cta">
+          <FaGithub /> GitHub
+        </a>
+      </nav>
     </>
   );
 }
